@@ -38,7 +38,7 @@ public class VariableNamesTheme {
         //&
         char variableChar = '&';
         System.out.println(variableChar);
-
+        
         
     }
 }
