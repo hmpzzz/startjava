@@ -121,10 +121,70 @@ public class VariableNamesTheme {
 
         System.out.println("");
 
-        System.out.println("1. boolean-переменные");
+        System.out.println("2. boolean-переменные");
 
         //Сотни равны?
         boolean hundredsEqual = true;
         System.out.println("Сотни равны?" + " = " + hundredsEqual);
+
+        //Компьютер включен?
+        boolean compTurnedOn = true;
+        System.out.println("Компьютер включен?" + " = " + compTurnedOn);
+
+        //Есть равные цифры?
+        boolean eqlNubs = false;
+        System.out.println("Есть равные цифры?" + " = " + eqlNubs);
+
+        //Создано?
+        boolean created = true;
+        System.out.println("Создано?" + " = " + created);
+
+        //Пусто?
+        boolean empty = true;
+        System.out.println("Пусто?" + " = " + empty);
+
+        //Активный?
+        boolean active = false;
+        System.out.println("Активный?" + " = " + active);
+
+        //Новый?
+        boolean new1 = false;
+        System.out.println("Новый?" + " = " + new1);
+
+        //Электронная почта действительная?
+        boolean validEmail = true;
+        System.out.println("Электронная почта действительная?" + " = " + validEmail);
+
+        //Имеются уникальные строки?
+        boolean uniqStrings = true;
+        System.out.println("Имеются уникальные строки?" + " = " + uniqStrings);
+
+        System.out.println("");
+
+        System.out.println("3. Аббревиатуры");
+
+        //Старый universally unique identifier
+        String OUUI = "OUUI";
+        System.out.println("Старый universally unique identifier" + " = " + OUUI);
+
+        //Производитель оперативной памяти
+        String RAMM = "RAMM";
+        System.out.println("Производитель оперативной памяти" + " = " + RAMM);
+
+        //Емкость жесткого диска
+        String HDC = "HDC";
+        System.out.println("Емкость жесткого диска" + " = " + HDC);
+
+        //Протокол передачи гипертекста
+        String HTP = "HTP";
+        System.out.println("Протокол передачи гипертекста" + " = " + HTP);
+
+        //Сокращенный uniform resource locator
+        String AURL = "AURL";
+        System.out.println("Сокращенный uniform resource locator" + " = " + AURL);
+
+        //Новый идентификатор клиента
+        String NID = "NID";
+        System.out.println("Новый идентификатор клиента" + " = " + NID);
     }
 }
