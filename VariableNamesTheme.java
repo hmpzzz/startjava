@@ -163,16 +163,16 @@ public class VariableNamesTheme {
         System.out.println("Старый universally unique identifier" + " = " + oldUniversallyUniqueIdentifier);
 
         //Производитель оперативной памяти
-        String ramm = "RAMM";
-        System.out.println("Производитель оперативной памяти" + " = " + ramm);
+        String ramManufacturer = "RAMM";
+        System.out.println("Производитель оперативной памяти" + " = " + ramManufacturer);
 
         //Емкость жесткого диска
-        String hdc = "HDC";
-        System.out.println("Емкость жесткого диска" + " = " + hdc);
+        String hardDriveCapacity = "HDC";
+        System.out.println("Емкость жесткого диска" + " = " + hardDriveCapacity);
 
         //Протокол передачи гипертекста
-        String htp = "HTP";
-        System.out.println("Протокол передачи гипертекста" + " = " + htp);
+        String hypertextTransferProtocol = "HTP";
+        System.out.println("Протокол передачи гипертекста" + " = " + hypertextTransferProtocol);
 
         //Сокращенный uniform resource locator
         String abbreviatedUniformResourceLocator = "AURL";
