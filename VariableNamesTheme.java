@@ -159,8 +159,8 @@ public class VariableNamesTheme {
         System.out.println("\n3. Аббревиатуры");
 
         //Старый universally unique identifier
-        String OldUniversallyUniqueIdentifier = "OUUI";
-        System.out.println("Старый universally unique identifier" + " = " + OldUniversallyUniqueIdentifier);
+        String oldUniversallyUniqueIdentifier = "OUUI";
+        System.out.println("Старый universally unique identifier" + " = " + oldUniversallyUniqueIdentifier);
 
         //Производитель оперативной памяти
         String ramm = "RAMM";
