@@ -1,12 +1,12 @@
 public class VariableNamesTheme {
     public static void main(String[] args) {
-        System.out.println("1. Разные переменные");
+        System.out.println("1.Разные переменные");
 
         //Цифра
         int number = 5;
         System.out.println("Цифра" + " = " + number);
 
-        //Сумма чисел
+        //Сумма чисе
         int sumNumbers = 12;
         System.out.println("Сумма чисел" + " = " + sumNumbers);
 
@@ -181,5 +181,39 @@ public class VariableNamesTheme {
         //Новый идентификатор клиента
         String newClientId = "NCID";
         System.out.println("Новый идентификатор клиента" + " = " + newClientId);
+
+        System.out.println("\n1. Вывод характеристик компьютера");
+
+        //Количество ядер процессора
+        byte cores = 6;
+        System.out.println("Количество ядер процессора" + " = " + cores);
+
+        //Количество пикселей дисплея
+        short ppi = 3250;
+        System.out.println("Количество пикселей дисплея" + " = " + ppi);
+
+        //Серия процессора
+        int cpuSeries = 5000;
+        System.out.println("Cерия процессора" + " " + cpuSeries);
+
+        //Количество кластеров SSD
+        long numberSsdClusters = 127250000;
+        System.out.println("Количество кластеров SSD" + " = " + numberSsdClusters);
+
+        //Свбодное место на диске
+        float freeSpace = 44.21f;
+        System.out.println("Свбодное место на диске" + " = " + freeSpace);
+
+        //Темперарутра процессора
+        double cpuTemperature = 34.38;
+        System.out.println("Темперарутра процессора" + " = " + cpuTemperature);
+
+        //Работоспособность второго SSD
+        char perfomanceSecondSsd = '†';
+        System.out.println("Работоспособность второго SSD" + " = " + perfomanceSecondSsd);
+
+        //Компьютер включен?
+        boolean isComputerPowerOn = true;
+        System.out.println("Компьютер включен?" + " = " + isComputerPowerOn);
     }
 }
