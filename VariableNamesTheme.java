@@ -215,5 +215,15 @@ public class VariableNamesTheme {
         //Компьютер включен?
         boolean isComputerPowerOn = true;
         System.out.println("Компьютер включен?" + " = " + isComputerPowerOn);
+
+        System.out.println("\n2. Расчет стоимости товара со скидкой");
+
+        int penCost = 100;
+        int bookCost = 200;
+        int sale = penCost + bookCost - 11%;
+
+        String fullPrice = penCost + bookCost;
+        String discountAmount = 
+        String saleF- ullPrice
     }
 }
