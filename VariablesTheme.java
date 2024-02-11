@@ -18,13 +18,13 @@ public class VariablesTheme {
         long numberSsdClusters = 127250000;
         System.out.println("Количество кластеров SSD" + " = " + numberSsdClusters);
 
-        //Свбодное место на диске
+        //Свободное место на диске
         float freeSpace = 44.21f;
-        System.out.println("Свбодное место на диске" + " = " + freeSpace);
+        System.out.println("Свободное место на диске" + " = " + freeSpace);
 
-        //Темперарутра процессора
+        //Температура процессора
         double cpuTemperature = 34.38;
-        System.out.println("Темперарутра процессора" + " = " + cpuTemperature);
+        System.out.println("Температура процессора" + " = " + cpuTemperature);
 
         //Работоспособность второго SSD
         char perfomanceSecondSsd = '†';
@@ -39,11 +39,11 @@ public class VariablesTheme {
         int penCost = 100;
         int bookCost = 200;
         int fullPrice = penCost + bookCost;
-        int salePrice = (penCost + bookCost) / 100 * 11;
+        int discountPrice = fullPrice / 100 * 11;
 
         System.out.println(fullPrice);
-        System.out.println(salePrice);
-        System.out.println(fullPrice - salePrice);
+        System.out.println(discountPrice);
+        System.out.println(fullPrice - discountPrice);
 
         System.out.println("\n3. Вывод слова JAVA");
 
@@ -59,92 +59,80 @@ public class VariablesTheme {
         int i = 2147483647;
         long ln = 9223372036854775807L;
 
-        System.out.println(b);
-        System.out.println(++b);
-        System.out.println(--b + "\n");
+        System.out.println(b + " " + (++b) + " " + (--b) + "\n");
+        System.out.println(s + " " + (++s) + " " + (--s) + "\n");
+        System.out.println(i + " " + (++i) + " " + (--i) + "\n");
+        System.out.println(ln + " " + (++ln) + " " + (--ln));
         
-        System.out.println(s);
-        System.out.println(++s);
-        System.out.println(--s + "\n");
-        
-        System.out.println(i);
-        System.out.println(++i);
-        System.out.println(--i + "\n");
-        
-        System.out.println(ln);
-        System.out.println(++ln);
-        System.out.println(--ln);
-
         System.out.println("\n5. Перестановка значений переменных");
 
-        int aa = 2;
-        int bb = 5;
+        int x = 2;
+        int y = 5;
         System.out.println("Перестановка значений с помощью третьей переменной");
         System.out.println("Исходные значения:");
-        System.out.println("a = " + aa);
-        System.out.println("b = " + bb);
-        int temp = aa;
-        aa = bb;
-        bb = temp;
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+        int temp = x;
+        x = y;
+        y = temp;
         System.out.println("После перестановки:");
-        System.out.println("a = " + aa);
-        System.out.println("b = " + bb);
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
 
         System.out.println("Перестановка значений с помощью арифметических операций");
         System.out.println("Исходные значения:");
-        System.out.println("a = " + aa);
-        System.out.println("b = " + bb);
-        aa = aa + bb;
-        bb = aa - bb;
-        aa = aa - bb;
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+        x = x + y;
+        y = x - y;
+        x = x - y;
         System.out.println("После перестановки:");
-        System.out.println("a = " + aa);
-        System.out.println("b = " + bb);
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
 
         System.out.println("Перестановка значений с помощью побитовой операции");
         System.out.println("Исходные значения:");
-        System.out.println("a = " + aa);
-        System.out.println("b = " + bb);
-        aa = aa ^ bb;
-        bb = aa ^ bb;
-        aa = aa ^ bb;
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
+        x ^= y;
+        y = x ^ y;
+        x ^= y;
         System.out.println("После перестановки:");
-        System.out.println("a = " + aa);
-        System.out.println("b = " + bb);
+        System.out.println("x = " + x);
+        System.out.println("y = " + y);
 
         System.out.println("\n6. Вывод символов и их кодов");
 
-        char charCode36 = '$';
-        char charCode42 = '*';
-        char charCode64 = '@';
-        char charCode124 = '|';
-        char charCode126 = '~';
-        int intCode36 = 36;
-        int intCode42 = 42;
-        int intCode64 = 64;
-        int intCode124 = 124;
-        int intCode126 = 126;
+        char dollar = '$';
+        char asterisk = '*';
+        char atSign = '@';
+        char verticalBar = '|';
+        char tilde = '~';
+        int numericValueDollar = (int) dollar;
+        int numericValueAsterisk = (int) asterisk;
+        int numericValueAtSign = (int) atSign;
+        int numericValueVerticalBar = (int) verticalBar;
+        int numericValueTilde = (int) tilde;
 
-        System.out.println("код символа: " + intCode36 + " соответствующий коду символ: " + charCode36);
-        System.out.println("код символа: " + intCode42 + " соответствующий коду символ: " + charCode42);
-        System.out.println("код символа: " + intCode64 + " соответствующий коду символ: " + charCode64);
-        System.out.println("код символа: " + intCode124 + " соответствующий коду символ: " + charCode124);
-        System.out.println("код символа: " + intCode126 + " соответствующий коду символ: " + charCode126);
+        System.out.println("код символа: " + numericValueDollar + " соответствующий коду символ: " + dollar);
+        System.out.println("код символа: " + numericValueAsterisk + " соответствующий коду символ: " + asterisk);
+        System.out.println("код символа: " + numericValueAtSign + " соответствующий коду символ: " + atSign);
+        System.out.println("код символа: " + numericValueVerticalBar + " соответствующий коду символ: " + verticalBar);
+        System.out.println("код символа: " + numericValueTilde + " соответствующий коду символ: " + tilde);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка");
 
-        char duke1 = '/';
-        char duke2 = '\\';
-        char duke3 = '_';
-        char duke4 = '(';
-        char duke5 = ')';
-        char duke6 = '/';
+        char slash = '/';
+        char backslash = '\\';
+        char underscore = '_';
+        char leftParenthesis = '(';
+        char rightParenthesis = ')';
 
-        System.out.println("    " + duke1 + duke2);
-        System.out.println("   " + duke1 + "  " + duke2);
-        System.out.println("  " + duke1 + duke3 + duke4 + " " + duke5 + duke2);
-        System.out.println(" " + duke1 + "      " + duke2);
-        System.out.println("" + duke1 + duke3 + duke3 + duke3 + duke3 + duke1 + duke2 + duke3 + duke3 + duke2);
+        System.out.println("    " + slash + backslash);
+        System.out.println("   " + slash + "  " + backslash);
+        System.out.println("  " + slash + underscore + leftParenthesis + " " + rightParenthesis + backslash);
+        System.out.println(" " + slash + "      " + backslash);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash);
 
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
 
