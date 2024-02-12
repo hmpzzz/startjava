@@ -85,7 +85,7 @@ public class VariablesTheme {
         System.out.println("y = " + y);
         x = x + y;
         y = x - y;
-        x = x - y;
+        x = x ^ y;
         System.out.println("После перестановки:");
         System.out.println("x = " + x);
         System.out.println("y = " + y);
@@ -108,17 +108,12 @@ public class VariablesTheme {
         char atSign = '@';
         char verticalBar = '|';
         char tilde = '~';
-        int numericValueDollar = (int) dollar;
-        int numericValueAsterisk = (int) asterisk;
-        int numericValueAtSign = (int) atSign;
-        int numericValueVerticalBar = (int) verticalBar;
-        int numericValueTilde = (int) tilde;
 
-        System.out.println("код символа: " + numericValueDollar + " соответствующий коду символ: " + dollar);
-        System.out.println("код символа: " + numericValueAsterisk + " соответствующий коду символ: " + asterisk);
-        System.out.println("код символа: " + numericValueAtSign + " соответствующий коду символ: " + atSign);
-        System.out.println("код символа: " + numericValueVerticalBar + " соответствующий коду символ: " + verticalBar);
-        System.out.println("код символа: " + numericValueTilde + " соответствующий коду символ: " + tilde);
+        System.out.println("код символа: " + (int) dollar + " соответствующий коду символ: " + dollar);
+        System.out.println("код символа: " + (int) asterisk + " соответствующий коду символ: " + asterisk);
+        System.out.println("код символа: " + (int) atSign + " соответствующий коду символ: " + atSign);
+        System.out.println("код символа: " + (int) verticalBar + " соответствующий коду символ: " + verticalBar);
+        System.out.println("код символа: " + (int) tilde + " соответствующий коду символ: " + tilde);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка");
 
@@ -128,11 +123,14 @@ public class VariablesTheme {
         char leftParenthesis = '(';
         char rightParenthesis = ')';
 
-        System.out.println("    " + slash + backslash);
+        System.out.println("    " + slash 
+            + backslash);
         System.out.println("   " + slash + "  " + backslash);
-        System.out.println("  " + slash + underscore + leftParenthesis + " " + rightParenthesis + backslash);
+        System.out.println("  " + slash + underscore + leftParenthesis + " " + rightParenthesis +
+                backslash);
         System.out.println(" " + slash + "      " + backslash);
-        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash + backslash + underscore + underscore + backslash);
+        System.out.println("" + slash + underscore + underscore + underscore + underscore + slash +
+                backslash + underscore + underscore + backslash);
 
         System.out.println("\n8. Вывод количества сотен, десятков и единиц числа");
 
