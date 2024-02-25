@@ -46,7 +46,7 @@ public class IfElseStatementTheme {
         int number = -15;
         if(number == 0) {
             System.out.println("является нулем");
-            return;
+            System.exit(0);
         }
         if(number > 0) {
             if(number % 2 == 0) {
@@ -61,7 +61,7 @@ public class IfElseStatementTheme {
                 System.out.println(number + " является отрицательным и нечетным числом");
             }
         }
-
+        
         System.out.println("\n4. Поиск одинаковых цифр в числах");
 
         int number1 = 123;
@@ -76,17 +76,15 @@ public class IfElseStatementTheme {
           
         if((hundredsNumber1 == hundredsNumber2) || (tensNumber1 == tensNumber2) || 
             (onesNumber1 == onesNumber2)) {
+            System.out.println("В числах " + number1 + " и " + number2 + " одинаковые цифры " + "");
             if(hundredsNumber1 == hundredsNumber2) {
-                System.out.println("В числах " + number1 + " и " + number2 + " одинаковые цифры " + 
-                    hundredsNumber1 + " и " + hundredsNumber2 + " в третьем разряде");
+                System.out.println(hundredsNumber1 + " и " + hundredsNumber2 + " в третьем разряде");
             }
             if(tensNumber1 == tensNumber2) {
-                System.out.println("В числах " + number1 + " и " + number2 + " одинаковые цифры " + 
-                    tensNumber1 + " и " + tensNumber2 + " во втором разряде");
+                System.out.println(tensNumber1 + " и " + tensNumber2 + " во втором разряде");
             }
             if(onesNumber1 == onesNumber2) {
-                System.out.println("В числах " + number1 + " и " + number2 + " одинаковые цифры " + 
-                    onesNumber1 + " и " + onesNumber2 + " в первом разряде");
+                System.out.println(onesNumber1 + " и " + onesNumber2 + " в первом разряде");
             }
         } else {
             System.out.println("Равных чисел нет");
@@ -107,17 +105,15 @@ public class IfElseStatementTheme {
         System.out.println("\n6. Подсчет суммы вклада и начисленных банком %");
 
         int depositAmount = 450_000;
-        int percent;
+        int percent = 5;
 
-        if(depositAmount <= 100_000 && depositAmount >= 0) {
-            percent = 5;
-        } else if(depositAmount <= 300_000 && depositAmount >= 100_000) {
+        if(depositAmount >= 0 && depositAmount <= 100_000) {
+        } else if(depositAmount >= 100_000 && depositAmount <= 300_000) {
             percent = 7;
         } else if(depositAmount >= 300_000) {
             percent = 10;
         } else {
             System.out.println("Некорректная сумма вклада");
-            return;
         }
 
         int accruedInterest = depositAmount * percent / 100;
@@ -130,32 +126,33 @@ public class IfElseStatementTheme {
         System.out.println("\n7. Определение оценки по предметам %");
 
         int historyPrecent = 59;
-        int programmingPrecent = 92;
         int historyGrade = -1;
-        int programmingGrade = -1;
 
         if(historyPrecent <= 60 && historyPrecent >= 0) {
             historyGrade = 2;
-        }else if(historyPrecent > 60 && historyPrecent <= 73) {
+        } else if(historyPrecent > 60 && historyPrecent <= 73) {
             historyGrade = 3;
-        }else if(historyPrecent > 73 && historyPrecent <= 91) {
+        } else if(historyPrecent > 73 && historyPrecent <= 91) {
             historyGrade = 4;
-        }else if(historyPrecent > 91 && historyPrecent <= 100) {
+        } else if(historyPrecent > 91 && historyPrecent <= 100) {
             historyGrade = 5;
         }
+        int programmingPrecent = 92;
+        int programmingGrade = -1;
+
         if(programmingPrecent <= 60 && programmingPrecent >= 0) {
             programmingGrade = 2;
-        }else if(programmingPrecent > 60 && programmingPrecent <= 73) {
+        } else if(programmingPrecent > 60 && programmingPrecent <= 73) {
             programmingGrade = 3;
-        }else if(programmingPrecent > 73 && programmingPrecent <= 91) {
+        } else if(programmingPrecent > 73 && programmingPrecent <= 91) {
             programmingGrade = 4;
-        }else if(programmingPrecent > 91 && programmingPrecent <= 100) {
+        } else if(programmingPrecent > 91 && programmingPrecent <= 100) {
             programmingGrade = 5;
         }
         System.out.println("История: " + historyGrade);
         System.out.println("Программирование: " + programmingGrade);
-        System.out.println("Средний балл оценок по предметам: " + (historyGrade + 
-            programmingGrade) / 2);
+        System.out.println("Средний балл оценок по предметам: " + 
+            (historyGrade + programmingGrade) / 2);
         System.out.println("Средний % по предметам: " + (historyPrecent + programmingPrecent) / 2);
 
         System.out.println("\n8. Расчет годовой прибыли");
@@ -169,9 +166,11 @@ public class IfElseStatementTheme {
 
         if(yearGrade > 0) {
             sign = "+";
-        }else if(yearGrade < 0) { 
+        } else if(yearGrade < 0) { 
             sign = "-";
         }
         System.out.println("Прибыль за год: " + sign + yearGrade);
     }
 }
+
+
