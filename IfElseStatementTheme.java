@@ -47,21 +47,20 @@ public class IfElseStatementTheme {
         if(number == 0) {
             System.out.println("является нулем");
             System.exit(0);
-        }
-        if(number > 0) {
-            if(number % 2 == 0) {
-                System.out.println(number + " является положительным и четным числом");
-            } else {
-                System.out.println(number + " является положительным и нечетным числом");
-        }
         } else {
-            if(number % 2 == 0) {
-                System.out.println(number + " является отрицательным и четным числом");
-            } else {
-                System.out.println(number + " является отрицательным и нечетным числом");
-            }
+            System.out.println(number + " является ");
+                if (number > 0) {
+                    System.out.println("положительным и ");
+                } else {
+                     System.out.println("отрицательным и ");
+                }
+                if (number % 2 == 0) {
+                    System.out.println("четным");
+                } else {
+                    System.out.println("нечетным"); 
+                }
         }
-        
+
         System.out.println("\n4. Поиск одинаковых цифр в числах");
 
         int number1 = 123;
@@ -128,7 +127,7 @@ public class IfElseStatementTheme {
         int historyPrecent = 59;
         int historyGrade = -1;
 
-        if(historyPrecent <= 60 && historyPrecent >= 0) {
+        if(historyPrecent >= 0 && historyPrecent <= 60) {
             historyGrade = 2;
         } else if(historyPrecent > 60 && historyPrecent <= 73) {
             historyGrade = 3;
@@ -140,7 +139,7 @@ public class IfElseStatementTheme {
         int programmingPrecent = 92;
         int programmingGrade = -1;
 
-        if(programmingPrecent <= 60 && programmingPrecent >= 0) {
+        if(programmingPrecent >= 0 && programmingPrecent <= 60) {
             programmingGrade = 2;
         } else if(programmingPrecent > 60 && programmingPrecent <= 73) {
             programmingGrade = 3;
@@ -152,22 +151,20 @@ public class IfElseStatementTheme {
         System.out.println("История: " + historyGrade);
         System.out.println("Программирование: " + programmingGrade);
         System.out.println("Средний балл оценок по предметам: " + 
-            (historyGrade + programmingGrade) / 2);
+                (historyGrade + programmingGrade) / 2);
         System.out.println("Средний % по предметам: " + (historyPrecent + programmingPrecent) / 2);
 
         System.out.println("\n8. Расчет годовой прибыли");
 
-        int productSale = 13000;
-        int premisesRental = 5000;
-        int productionCost = 9000;
+        int productSale = 13_000;
+        int premisesRental = 5_000;
+        int productionCost = 9_000;
 
         int yearGrade = (productSale + premisesRental + productionCost) * 12;
         String sign = "";
 
         if(yearGrade > 0) {
             sign = "+";
-        } else if(yearGrade < 0) { 
-            sign = "-";
         }
         System.out.println("Прибыль за год: " + sign + yearGrade);
     }
