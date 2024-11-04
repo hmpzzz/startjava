@@ -136,23 +136,25 @@ public class CyclesTheme {
 
         System.out.println("\n7. Отображение ASCII-символов");
 
-        System.out.printf("%-8s  %-10s  %-35s\n", "DECIMAL", "CHARACTER", "DESCRIPTION");
+        // Заголовки таблицы с выравниванием
+        System.out.printf("%-10s %-10s %-40s%n", "DECIMAL", "CHARACTER", "DESCRIPTION");
 
-        int start7 = 33;
-        int end7 = 126;
-
-        for (int i = start7; i < end7; i++) {
-            char ch = (char) i;
-            String categoryName = Character.getName(ch);
-
-            if (!Character.isDigit(ch) && i % 2 != 0) {
-                System.out.printf("%-8d  %-10c  %-35s\n", i, ch, categoryName);
-            }
-
-            if (Character.isLowerCase(ch) && i % 2 == 0) {
-                System.out.printf("%-8d  %-10c  %-35s\n", i, ch, categoryName);
-            }
+        // Символы с нечетными кодами до цифр (код 48)
+        for (int i = 33; i < 48; i += 2) {
+            char character = (char) i;
+            String description = "          " + Character.getName(i);
+            // Центрирование вывода значений, включая описание
+            System.out.printf("%5d %10c %-40s%n", i, character, description);
         }
+
+        // Маленькие английские буквы с четными кодами
+        for (int i = 98; i <= 122; i += 2) {
+            char character = (char) i;
+            String description = "          " + Character.getName(i);
+            // Центрирование вывода значений, включая описание
+            System.out.printf("%5d %10c %-40s%n", i, character, description);
+        }
+
 
         System.out.println("\n8. Проверка, является ли число палиндромом");
 
@@ -214,5 +216,3 @@ public class CyclesTheme {
         }
     }
 }
-
-123123111123123
