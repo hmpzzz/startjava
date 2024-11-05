@@ -82,7 +82,7 @@ public class CyclesTheme {
             System.out.printf("%5s", 0);
         }
 
-         System.out.println("\n5. Проверка количества двоек числа на четность/нечетность");
+        System.out.println("\n5. Проверка количества двоек числа на четность/нечетность");
 
         int number5 = 3242592;
         int countTwos = 0;
@@ -97,8 +97,7 @@ public class CyclesTheme {
 
         String parityResult = "четное";
         if (countTwos % 2 != 0) {
-            parityResult = "нечетное";
-        
+            parityResult = "нечетное";        
         }
 
         System.out.printf("В %d %s количество двоек — %d\n", originalNumber, parityResult, countTwos);
@@ -155,52 +154,47 @@ public class CyclesTheme {
             System.out.printf("%5d %10c %-40s%n", i, character, description);
         }
 
-
         System.out.println("\n8. Проверка, является ли число палиндромом");
 
         int number8 = 1234321;
-        String numStr = Integer.toString(number8);
+        int originalNumber8 = number8;
+        int reversedNumber = 0;
 
-        boolean isPalindrome = true;
-        for (int i = 0; i < numStr.length() / 2; i++) {
-            if (numStr.charAt(i) != numStr.charAt(numStr.length() - 1 - i)) {
-                isPalindrome = false;
-                break;
-            }
+        while (number8 > 0) {
+            int lastDigit = number8 % 10;
+            reversedNumber = reversedNumber * 10 + lastDigit;
+            number8 /= 10;
         }
 
-        if (isPalindrome) {
-            System.out.printf("Число %d является палиндромом\n", number8);
+        if (originalNumber8 == reversedNumber) {
+            System.out.printf("Число %d палиндромом\n", originalNumber8);
         } else {
-            System.out.printf("Число %d не является палиндромом\n", number8);
+            System.out.printf("Число %d не палиндромом", originalNumber8);
         }
 
         System.out.println("\n9. Проверка, является ли число счастливым");
 
         int number9 = 123456;
-        int firstHalf = number9 / 1000;
-        int secondHalf = number9 % 1000;
-
+        int originalNumber9 = number9;
         int sumFirstHalf = 0;
-        while (firstHalf > 0) {
-            sumFirstHalf += firstHalf % 10;
-            firstHalf /= 10;
-        }
-
         int sumSecondHalf = 0;
-        while (secondHalf > 0) {
-            sumSecondHalf += secondHalf % 10;
-            secondHalf /= 10;
+
+        for (int i = 0; i < 6; i++) {
+            int digit = number9 % 10;
+            number9 /= 10;
+
+            if (i < 3) {
+                sumSecondHalf += digit;
+            } else {
+                sumFirstHalf += digit;
+            }
         }
 
-        if (sumFirstHalf == sumSecondHalf) {
-            System.out.printf("Число %d является счастливым\n", number9);
-        } else {
-            System.out.printf("Число %d не является счастливым\n", number9);
-        }
+        String result = (sumFirstHalf == sumSecondHalf) ? "счастливое" : "не счастливое";
+        System.out.printf("Число %d - %s\n", originalNumber9, result);
 
-        System.out.printf("Сумма цифр %d = %d, а сумма %d = %d\n", 
-                          number9 / 1000, sumFirstHalf, number9 % 1000, sumSecondHalf);
+        System.out.printf("Сумма цифр %d = %d\n", originalNumber9 / 1000, sumFirstHalf);
+        System.out.printf("Сумма %d = %d\n", originalNumber9 % 1000, sumSecondHalf);
 
         System.out.println("\n10. Отображение таблицы умножения Пифагора");
 
