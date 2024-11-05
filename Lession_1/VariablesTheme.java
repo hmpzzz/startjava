@@ -2,35 +2,35 @@ public class VariablesTheme {
     public static void main(String[] args) {
         System.out.println("\n1. Вывод характеристик компьютера");
 
-        //Количество ядер процессора
+        // Количество ядер процессора
         byte cores = 6;
         System.out.println("Количество ядер процессора" + " = " + cores);
 
-        //Количество пикселей дисплея
+        // Количество пикселей дисплея
         short ppi = 3250;
         System.out.println("Количество пикселей дисплея" + " = " + ppi);
 
-        //Серия процессора
+        // Серия процессора
         int cpuSeries = 5000;
         System.out.println("Cерия процессора" + " " + cpuSeries);
 
-        //Количество кластеров SSD
+        // Количество кластеров SSD
         long numberSsdClusters = 127250000;
         System.out.println("Количество кластеров SSD" + " = " + numberSsdClusters);
 
-        //Свободное место на диске
+        // Свободное место на диске
         float freeSpace = 44.21f;
         System.out.println("Свободное место на диске" + " = " + freeSpace);
 
-        //Температура процессора
+        // Температура процессора
         double cpuTemperature = 34.38;
         System.out.println("Температура процессора" + " = " + cpuTemperature);
 
-        //Работоспособность второго SSD
+        // Работоспособность второго SSD
         char perfomanceSecondSsd = '†';
         System.out.println("Работоспособность второго SSD" + " = " + perfomanceSecondSsd);
 
-        //Компьютер включен?
+        // Компьютер включен?
         boolean isComputerPowerOn = true;
         System.out.println("Компьютер включен?" + " = " + isComputerPowerOn);
 
@@ -112,7 +112,8 @@ public class VariablesTheme {
         System.out.println("код символа: " + (int) dollar + " соответствующий коду символ: " + dollar);
         System.out.println("код символа: " + (int) asterisk + " соответствующий коду символ: " + asterisk);
         System.out.println("код символа: " + (int) atSign + " соответствующий коду символ: " + atSign);
-        System.out.println("код символа: " + (int) verticalBar + " соответствующий коду символ: " + verticalBar);
+        System.out.println("код символа: " + (int) verticalBar + " соответствующий коду символ: " + 
+                verticalBar);
         System.out.println("код символа: " + (int) tilde + " соответствующий коду символ: " + tilde);
 
         System.out.println("\n7. Вывод в консоль ASCII-арт Дюка");
@@ -123,8 +124,8 @@ public class VariablesTheme {
         char leftParenthesis = '(';
         char rightParenthesis = ')';
 
-        System.out.println("    " + slash 
-            + backslash);
+        System.out.println("    " + slash +
+                backslash);
         System.out.println("   " + slash + "  " + backslash);
         System.out.println("  " + slash + underscore + leftParenthesis + " " + rightParenthesis +
                 backslash);
@@ -147,7 +148,7 @@ public class VariablesTheme {
         System.out.println("  десятков - " + tens);
         System.out.println("  единиц - " + ones);
         System.out.println("Сумма его цифр = " + sum);
-        System.out.println("Произведение = "+ multiplication);
+        System.out.println("Произведение = " + multiplication);
 
         System.out.println("\n9. Вывод времени");
 
@@ -157,6 +158,5 @@ public class VariablesTheme {
         int seconds = time % 60;
 
         System.out.println(hours + ":" + minutes + ":" + seconds);
-
     }
 }
